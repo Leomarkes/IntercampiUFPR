@@ -194,16 +194,16 @@ $(document).ready(function () {
     $("#destino").change(function () {
         destino = $(this).children("option:selected").val();
         if(destino==origem){
-            $("#resultado").html('<div class="alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div>');
+            $("#resultado").html('<div class="row justify-content-center"> <div class="col-md-4 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
         }else{
             $("#resultado").html('');
-            $("#resultado").append("<h1>Intercampi 1</h1>");
+            $("#resultado").append("<h1 style='text-align:center'>Intercampi 1</h1><div class='row'>");
             montar(dados1,origem,destino,cont,string);
-            $("#resultado").append("<h1>Intercampi 2</h1>");
+            $("#resultado").append("<hr></div><h1 style='text-align:center'>Intercampi 2</h1>");
             montar(dados2,origem,destino,cont,string);
-            $("#resultado").append("<h1>Intercampi 4</h1>");
+            $("#resultado").append("<hr><h1 style='text-align:center'>Intercampi 4</h1>");
             montar(dados4,origem,destino,cont,string);
-            $("#resultado").append("<h1>Intercampi extra</h1>");
+            $("#resultado").append("<hr><h1 style='text-align:center'>Intercampi extra</h1>");
             montar(dadosExtra,origem,destino,cont,string);
         }
     });
@@ -214,7 +214,7 @@ $(document).ready(function () {
 function montar(dados,origem,destino,cont,string){
             dados.forEach(elemento => {
                 if(cont==true){
-                    string+='<p>'+elemento[1]+' - '+elemento[0]+'</p>';
+                    string+='<span>'+elemento[1]+'</span><p>'+elemento[0]+'</p>';
                     //se o onibus recolhe (existe elemento[2]), ignora
                     if(elemento[2] !== void 0){
                         string='';
@@ -223,7 +223,7 @@ function montar(dados,origem,destino,cont,string){
                     //Quando chega no destino, da append no itinerario, zera string
                     //zera cont e sai da funcao
                     if(destino==elemento[1]){
-                        $("#resultado").append(string+"<br>");
+                        $("#resultado").append(string+'</div><br><br>');
                         string='';
                         cont=false;
                     }
@@ -231,7 +231,7 @@ function montar(dados,origem,destino,cont,string){
                 //Se achar a origem, inicia itinerario
                 if(origem==elemento[1] && elemento[2] === void 0){
                     string='';
-                    string+='<p>'+elemento[1]+' - '+elemento[0]+'</p>';
+                    string+='<div class="col-md-4"> <span>'+elemento[1]+'</span><p>'+elemento[0]+'</p>';
                     cont=true;
                 }
             });
