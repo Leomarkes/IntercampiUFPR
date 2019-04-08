@@ -1,3 +1,4 @@
+
 var resultado='';
 var dict = new Object();
     var dict = {
@@ -13,7 +14,8 @@ var dict = new Object();
         "sept": "SEPT",
         "reboucas": "Rebouças"
       };
-$(document).ready(function () {    
+$(document).ready(function () {
+        
     //Campus
     var campus = ["agrarias", "artes", "botanico", "comunicacao", "poli", "prae", "reboucas-c", "reboucas-jn",
         "reitoria", "sept", "reboucas"]
@@ -221,6 +223,7 @@ $(document).ready(function () {
             resultado += "<hr></div><h1 class='titulo'>Intercampi extra</h1><div class='container'>";
             montar(dadosExtra, origem, destino);
             $("#resultado").append(resultado);
+            $('[data-toggle="popover"]').popover();
         }
     });
 
@@ -233,15 +236,23 @@ function montar(dados, origem, destino) {
     cont = false;
     dados.forEach(elemento => {
         if (cont == true) {
-            string += '<div class="col-md-1"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p></div>';
+            if(destino!=elemento[1]){
+                popover+="<p>"+dict[elemento[1]]+"-"+elemento[0]+"</p>";
+            }
             //se o onibus recolhe (existe elemento[2]), ignora
             if (elemento[2] !== void 0) {
                 string = '';
+                popover='';
                 cont = false;
             }
             //Quando chega no destino, da append no itinerario, zera string
             //zera cont e sai da funcao
             if (destino == elemento[1]) {
+                if(popover!==''){
+                    string+='<button type="button" data-html="true" class="btn paradas btn-lg btn-danger" data-toggle="popover" title="Itinerário" data-content="'+popover+'">p</button>';
+                    popover='';
+                }
+                string += '<div class="col-md-1"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p></div>';
                 resultado += string + '</div>';
                 string = '';
                 cont = false;
@@ -249,6 +260,7 @@ function montar(dados, origem, destino) {
         }
         //Se achar a origem, inicia itinerario
         if (origem == elemento[1] && elemento[2] === void 0) {
+            popover='';
             string = '';
             string += '<div class="row"> <div class="col-md-1"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p></div>';
             cont = true;
