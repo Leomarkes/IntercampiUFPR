@@ -241,6 +241,10 @@ function montarItinerario(dados) {
     string = '';
     popover = '';
     cont = false;
+    //controle se tem popover no meio
+    contpop=false;
+    //controla se tem itinerario
+    contres=false;
     dados.forEach(elemento => {
         if (cont == true) {
             if(destino!=elemento[1]){
@@ -256,21 +260,31 @@ function montarItinerario(dados) {
             //zera cont e sai da funcao
             if (destino == elemento[1]) {
                 if(popover!==''){
-                    string+='<div class="col-4"> <a tabindex="0" html="true" data-html="true" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Itinerário" data-content="'+popover+'"><img class="paradas" src="./imgs/stop.jpg"/></a></div>';
+                    contpop=true;
+                    string+='<div class="col-2 divIti"> <a tabindex="0" html="true" data-html="true" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Itinerário" data-content="'+popover+'"><img class="paradas" src="./imgs/stop.jpg"/></a></div>';
                     popover='';
                 }
-                string += '<div class="col-4"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p></div>';
+                string += '<div id="origem" class="destino col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p></div>';
+                if(!contpop){
+                    string=string.replace("origem col-5","origem col-6");
+                    string=string.replace("destino col-5","destino col-6");
+                }
                 resultado += string + '</div>';
                 string = '';
                 cont = false;
+                contpop = false;
             }
         }
         //Se achar a origem, inicia itinerario
         if (origem == elemento[1] && elemento[2] === void 0) {
+            contres=true;
             popover='';
             string = '';
-            string += '<div class="row"> <div class="col-4"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p></div>';
+            string += '<div class="row"> <div id="origem" class="origem col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p></div>';
             cont = true;
         }
     });
+    if(!contres){
+        resultado+="<p class='semhorario'>Não há horários para esta linha.</p>";
+    }
 }

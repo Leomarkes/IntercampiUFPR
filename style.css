@@ -14,3 +14,19 @@
     width: 30px;
     height: 30px;
 }
+
+.origem{
+    text-align:right;
+}
+
+.destino{
+    text-align: left;
+}
+
+.divIti{
+    text-align: center;
+}
+
+.semhorario{
+    text-align: center;
+}
