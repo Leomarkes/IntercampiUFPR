@@ -1,5 +1,7 @@
 .titulo{
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 0px 40px 0px;
 }
 
 .select{
@@ -29,4 +31,12 @@
 
 .semhorario{
     text-align: center;
+}
+
+span{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+p{
+    font-family: 'Comfortaa', cursive;
 }
