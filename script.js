@@ -222,13 +222,13 @@ $(document).ready(function () {
 function montarResultado(){
             $('[data-toggle="popover"]').popover('hide');
             $("#resultado").empty();
-            resultado += "<h1 class='titulo'>Intercampi 1</h1><div class='container'>";
+            resultado += "<h1 class='titulo'>Intercampi 1</h1><div class='container-fluid'>";
             montarItinerario(dados1);
-            resultado += "<hr></div><h1 class='titulo'>Intercampi 2</h1><div class='container'>";
+            resultado += "<hr></div><h1 class='titulo'>Intercampi 2</h1><div class='container-fluid'>";
             montarItinerario(dados2);
-            resultado += "<hr></div><h1 class='titulo'>Intercampi 4</h1><div class='container'>";
+            resultado += "<hr></div><h1 class='titulo'>Intercampi 4</h1><div class='container-fluid'>";
             montarItinerario(dados4);
-            resultado += "<hr></div><h1 class='titulo'>Intercampi extra</h1><div class='container'>";
+            resultado += "<hr></div><h1 class='titulo'>Intercampi extra</h1><div class='container-fluid'>";
             montarItinerario(dadosExtra);
             $("#resultado").append(resultado);
             resultado='';
@@ -256,10 +256,10 @@ function montarItinerario(dados) {
             //zera cont e sai da funcao
             if (destino == elemento[1]) {
                 if(popover!==''){
-                    string+='<div class="col-md-2"> <a tabindex="0" html="true" data-html="true" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Itinerário" data-content="'+popover+'"><img class="paradas" src="./imgs/stop.jpg"/></a></div>';
+                    string+='<div class="col-4"> <a tabindex="0" html="true" data-html="true" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Itinerário" data-content="'+popover+'"><img class="paradas" src="./imgs/stop.jpg"/></a></div>';
                     popover='';
                 }
-                string += '<div class="col-md-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p></div>';
+                string += '<div class="col-4"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p></div>';
                 resultado += string + '</div>';
                 string = '';
                 cont = false;
@@ -269,7 +269,7 @@ function montarItinerario(dados) {
         if (origem == elemento[1] && elemento[2] === void 0) {
             popover='';
             string = '';
-            string += '<div class="row"> <div class="col-md-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p></div>';
+            string += '<div class="row"> <div class="col-4"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p></div>';
             cont = true;
         }
     });
