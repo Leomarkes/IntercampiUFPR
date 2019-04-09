@@ -246,7 +246,7 @@ function montarItinerario(dados) {
     cont = false;
     //controle se tem popover no meio
     contpop=false;
-    //controla se tem itinerario
+    //salva o estado da var resultado para depois verificar se houve mudança
     estadoRes = resultado;
     dados.forEach(elemento => {
         if (cont == true) {
