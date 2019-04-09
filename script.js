@@ -203,7 +203,10 @@ var dict = new Object();
 $(document).ready(function () {
     $("#origem").change(function () {
         origem = $(this).children("option:selected").val();
-        if(destino!=null){
+        if (destino == origem) {
+            console.log('a');
+            $("#resultado").html('<div class="row justify-content-center"> <div class="col-md-4 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
+        }else if(destino!=null){
             montarResultado();
         }
     });
@@ -244,7 +247,7 @@ function montarItinerario(dados) {
     //controle se tem popover no meio
     contpop=false;
     //controla se tem itinerario
-    contres=false;
+    estadoRes = resultado;
     dados.forEach(elemento => {
         if (cont == true) {
             if(destino!=elemento[1]){
@@ -263,7 +266,7 @@ function montarItinerario(dados) {
                     string+='<div class="col-2 divIti"> <a tabindex="0" html="true" data-html="true" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Itinerário" data-content="'+popover+'"><img class="paradas" src="./imgs/stop.jpg"/></a></div>';
                     popover='';
                 }
-                string += '<div id="origem" class="destino col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p></div>';
+                string += '<div id="destino" class="destino col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p></div></div>';
                 if(!contpop){
                     string=string.replace("origem col-5","origem col-6");
                     string=string.replace("destino col-5","destino col-6");
@@ -273,7 +276,7 @@ function montarItinerario(dados) {
                     popover='';
                     cont = false;
                 }
-                resultado += string + '</div>';
+                resultado += string;
                 string = '';
                 cont = false;
                 contpop = false;
@@ -281,14 +284,13 @@ function montarItinerario(dados) {
         }
         //Se achar a origem, inicia itinerario
         if (origem == elemento[1] && elemento[2] === void 0) {
-            contres=true;
             popover='';
             string = '';
             string += '<div class="row"> <div id="origem" class="origem col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p></div>';
             cont = true;
         }
     });
-    if(!contres){
+    if(estadoRes===resultado){
         resultado+="<p class='semhorario'>Não há horários para esta linha.</p>";
     }
 }
