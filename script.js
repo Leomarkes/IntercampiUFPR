@@ -249,8 +249,7 @@ function montarItinerario(dados) {
         if (cont == true) {
             if(destino!=elemento[1]){
                 popover+="<p>"+dict[elemento[1]]+"-"+elemento[0]+"</p>";
-            }
-            //se o onibus recolhe (existe elemento[2]), ignora
+            }//se o onibus recolhe (existe elemento[2]), ignora
             if (elemento[2] !== void 0) {
                 string = '';
                 popover='';
@@ -268,6 +267,11 @@ function montarItinerario(dados) {
                 if(!contpop){
                     string=string.replace("origem col-5","origem col-6");
                     string=string.replace("destino col-5","destino col-6");
+                }
+                if (elemento[2] !== void 0) {
+                    string = '';
+                    popover='';
+                    cont = false;
                 }
                 resultado += string + '</div>';
                 string = '';
