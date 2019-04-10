@@ -275,15 +275,15 @@ $(document).ready(function () {
 function montarResultado(){
             $('[data-toggle="popover"]').popover('hide');
             $("#resultado").empty();
-            resultado += "<h1 class='titulo'>Intercampi 1</h1><div class='container-fluid'>";
+            resultado += "<h3 class='titulo'>Intercampi 1</h3><div class='container-fluid'>";
             montarItinerario(dados1);
-            resultado += "<hr></div><h1 class='titulo'>Intercampi 2</h1><div class='container-fluid'>";
+            resultado += "<hr></div><h3 class='titulo'>Intercampi 2</h3><div class='container-fluid'>";
             montarItinerario(dados2);
-            resultado += "<hr></div><h1 class='titulo'>Intercampi 4</h1><div class='container-fluid'>";
+            resultado += "<hr></div><h3 class='titulo'>Intercampi 4</h3><div class='container-fluid'>";
             montarItinerario(dados4);
-            resultado += "<hr></div><h1 class='titulo'>Intercampi extra</h1><div class='container-fluid'>";
+            resultado += "<hr></div><h3 class='titulo'>Intercampi extra</h3><div class='container-fluid'>";
             montarItinerario(dadosExtra);
-            resultado += "<hr></div><h1 class='titulo'>Intercampi 3 (Sábado)</h1><div class='container-fluid'>";
+            resultado += "<hr></div><h3 class='titulo'>Intercampi 3 (Sábado)</h3><div class='container-fluid'>";
             montarItinerario(dados3);
             $("#resultado").append(resultado);
             resultado='';
