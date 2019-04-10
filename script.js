@@ -189,7 +189,7 @@ var origem = null, destino = null, resultado='';
 var dict = new Object();
     var dict = {
         "agrarias": "Agrárias",
-        "artes": "Artes",
+        "artes": "DeArtes",
         "botanico": "Botânico",
         "comunicacao": "Comunicação",
         "poli": "Politécnico",
