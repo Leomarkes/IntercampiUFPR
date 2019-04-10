@@ -268,7 +268,7 @@ $(document).ready(function () {
 
     $("#linkMapDest").click(function () {
         if(destino == null){
-            $("#resultado").html('<br><div class="row justify-content-center"> <div class="col-md-4 alert alert-danger" role="alert"> O destino deve ser selecionada antes. </div></div>');
+            $("#resultado").html('<br><div class="row justify-content-center"> <div class="col-md-4 alert alert-danger" role="alert"> O destino deve ser selecionado antes. </div></div>');
         }
     });
 });
