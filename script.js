@@ -251,7 +251,7 @@ function montarItinerario(dados) {
     dados.forEach(elemento => {
         if (cont == true) {
             if(destino!=elemento[1]){
-                popover+="<p>"+dict[elemento[1]]+"-"+elemento[0]+"</p>";
+                popover+="<p>"+dict[elemento[1]]+": "+elemento[0]+"</p>";
             }//se o onibus recolhe (existe elemento[2]), ignora
             if (elemento[2] !== void 0) {
                 string = '';
