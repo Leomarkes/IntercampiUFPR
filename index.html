@@ -31,9 +31,9 @@ alunos do curso de Análise e Desenvolvimento de Sistemas da Univeresidade Feder
       </div>
     </div>
   </div>
-  <div class="container select">
-    <div class="row justify-content-center">
-      <div class="col-md-4">
+  <div class="container-fluid select">
+    <div class="row">
+      <div class="col-6 col-md-4 offset-2 offset-md-4">
         <select name="origem" id="origem" class="custom-select">
           <option selected disabled>Origem</option>
           <option value="agrarias">Agrárias</option>
@@ -48,12 +48,15 @@ alunos do curso de Análise e Desenvolvimento de Sistemas da Univeresidade Feder
           <option value="sept">SEPT</option>
         </select>
       </div>
+      <div class="col-2 divIconMap">
+        <a target="_blank" id="linkMapOrig" href="#"><img hidden id="mapOrigem" class="iconMap" src="imgs/map.png"></a>
+      </div>
     </div>
   </div>
 
-  <div class="container select2">
-    <div class="row justify-content-center">
-      <div class="col-md-4">
+  <div class="container-fluid select2">
+    <div class="row">
+      <div class="col-6 col-md-4 offset-2 offset-md-4">
         <select name="destino" id="destino" class="custom-select">
           <option selected disabled>Destino</option>
           <option value="agrarias">Agrárias</option>
@@ -67,7 +70,9 @@ alunos do curso de Análise e Desenvolvimento de Sistemas da Univeresidade Feder
           <option value="reitoria">Reitoria</option>
           <option value="sept">SEPT</option>
         </select>
-        <a href="https://goo.gl/maps/LngxXaymqKN2"><img src="imgs/map.png"></a>
+      </div>
+      <div class="col-2 divIconMap">
+        <a target="_blank" id="linkMapDest" href="#"><img hidden id="mapDestino" class="iconMap" src="imgs/map.png"></a>
       </div>
     </div>
   </div>

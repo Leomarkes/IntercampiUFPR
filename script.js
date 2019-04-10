@@ -1,6 +1,22 @@
 //Campus
 var campus = ["agrarias", "artes", "botanico", "comunicacao", "poli", "prae", "reboucas-c", "reboucas-jn",
 "reitoria", "sept", "reboucas"]
+
+//maps
+var maps = new Object();
+    var maps = {
+        "agrarias": "https://goo.gl/maps/fNEw6uQsx5u",
+        "artes": "https://goo.gl/maps/c8WXiSfkJST2",
+        "botanico": "https://goo.gl/maps/tu61GwizR8N2",
+        "comunicacao": "https://goo.gl/maps/XWbbFB3kiR62",
+        "poli": "https://goo.gl/maps/DoJ8fTy2rQB2",
+        "prae": "https://goo.gl/maps/4x2yKgAnhiv",
+        "reboucas-c": "https://goo.gl/maps/oRzofkYV8EU2",
+        "reboucas-jn": "https://goo.gl/maps/Dx4Hnb8i6Jt",
+        "reitoria": "https://goo.gl/maps/ftNKFWXGQeQ2",
+        "sept": "https://goo.gl/maps/1JuBxu2zeXz",
+        "reboucas": "https://goo.gl/maps/wbuQUbxVroP2"
+      };
 //INTERCAMPI 1
 var dados1 = [
 ["06:45", campus[0]],
@@ -223,6 +239,8 @@ var dict = new Object();
 $(document).ready(function () {
     $("#origem").change(function () {
         origem = $(this).children("option:selected").val();
+        $("#linkMapOrig").attr("href",maps[origem]);
+        $("#mapOrigem").removeAttr('hidden');
         if (destino == origem) {
             console.log('a');
             $("#resultado").html('<div class="row justify-content-center"> <div class="col-md-4 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
@@ -233,6 +251,8 @@ $(document).ready(function () {
 
     $("#destino").change(function () {
         destino = $(this).children("option:selected").val();
+        $("#linkMapDest").attr("href",maps[destino]);
+        $("#mapDestino").removeAttr('hidden');
         if (destino == origem) {
             $("#resultado").html('<div class="row justify-content-center"> <div class="col-md-4 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
         } else if(origem!=null){

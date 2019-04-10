@@ -39,6 +39,16 @@ html{
 .select2{
     margin-bottom: 20px;
 }
+
+.iconMap{
+    width: 40px;
+    height: 40px;
+}
+
+.divIconMap{
+    padding-left:0;
+}
+
 .paradas{
     width: 30px;
     height: 30px;
