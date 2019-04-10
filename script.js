@@ -240,7 +240,6 @@ $(document).ready(function () {
     $("#origem").change(function () {
         origem = $(this).children("option:selected").val();
         $("#linkMapOrig").attr("href",maps[origem]);
-        $("#mapOrigem").removeAttr('hidden');
         if (destino == origem) {
             console.log('a');
             $("#resultado").html('<div class="row justify-content-center"> <div class="col-md-4 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
@@ -252,7 +251,6 @@ $(document).ready(function () {
     $("#destino").change(function () {
         destino = $(this).children("option:selected").val();
         $("#linkMapDest").attr("href",maps[destino]);
-        $("#mapDestino").removeAttr('hidden');
         if (destino == origem) {
             $("#resultado").html('<div class="row justify-content-center"> <div class="col-md-4 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
         } else if(origem!=null){
