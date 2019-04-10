@@ -183,6 +183,26 @@ var dadosExtra = [
 ["18:30", campus[4]],
 ["18:50", campus[8], "c"],
 ];
+
+//INTERCAMPI 3 (Sábado)
+var dados3 = [
+    ["06:30", campus[0]],
+    ["06:45", campus[8]],
+    ["06:55", campus[2]],
+    ["07:05", campus[4]],
+    ["07:20", campus[3]],
+    ["07:25", campus[0]],
+    ["07:40", campus[2]],
+    ["08:00", campus[4]],
+    ["08:25", campus[8]],
+    ["09:00", campus[0],"c"],
+    ["11:00", campus[0]],
+    ["11:10", campus[8]],
+    ["11:25", campus[2]],
+    ["11:30", campus[4]],
+    ["11:50", campus[8]],
+    ["12:00", campus[0], "c"],
+    ];
 //cont - Vai controlar inicio e fim do itinerario
 //string - vai montar o itinerario
 var origem = null, destino = null, resultado='';
@@ -233,6 +253,8 @@ function montarResultado(){
             montarItinerario(dados4);
             resultado += "<hr></div><h1 class='titulo'>Intercampi extra</h1><div class='container-fluid'>";
             montarItinerario(dadosExtra);
+            resultado += "<hr></div><h1 class='titulo'>Intercampi 3 (Sábado)</h1><div class='container-fluid'>";
+            montarItinerario(dados3);
             $("#resultado").append(resultado);
             resultado='';
             $('[data-toggle="popover"]').popover();
