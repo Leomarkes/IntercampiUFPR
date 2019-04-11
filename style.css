@@ -87,7 +87,7 @@ select{
     font-family: 'Comfortaa', cursive;
 }
 
-footer{
+.rodape{
     position: absolute;
     right: 0;
     bottom: 0;

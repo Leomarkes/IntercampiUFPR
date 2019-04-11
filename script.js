@@ -238,25 +238,27 @@ var dict = new Object();
       };
 $(document).ready(function () {
     $("#origem").change(function () {
-        $(".rodape").attr("style","position: absolute; right: 0; bottom: 0; left: 0; text-align: center; font-size: 12px;");
+        $(".rodape").attr("style","");
         origem = $(this).children("option:selected").val();
         $("#linkMapOrig").attr("href",maps[origem]);
         $("#linkMapOrig").attr("target","_blank");
         if (destino == origem) {
             console.log('a');
             $("#resultado").html('<div class="row justify-content-center"> <div class="col-10 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
+            $(".rodape").attr("style","position: relative; height: 10em; bottom:0;");
         }else if(destino!=null){
             montarResultado();
         }
     });
 
     $("#destino").change(function () {
-        $(".rodape").attr("style","position: absolute; right: 0; bottom: 0; left: 0; text-align: center; font-size: 12px;");
+        $(".rodape").attr("style","");
         destino = $(this).children("option:selected").val();
         $("#linkMapDest").attr("href",maps[destino]);
         $("#linkMapDest").attr("target","_blank");
         if (destino == origem) {
             $("#resultado").html('<div class="row justify-content-center"> <div class="col-10 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
+            $(".rodape").attr("style","position: relative; height: 10em; bottom:0;");
         } else if(origem!=null){
            montarResultado(); 
         }
@@ -265,12 +267,14 @@ $(document).ready(function () {
     $("#linkMapOrig").click(function () {
         if(origem == null){
             $("#resultado").html('<br><div class="row justify-content-center"> <div class="col-10 alert alert-danger" role="alert"> A origem deve ser selecionada antes. </div></div>');
+            $(".rodape").attr("style","position: relative; height: 10em; bottom:0;");
         }
     });
 
     $("#linkMapDest").click(function () {
         if(destino == null){
             $("#resultado").html('<br><div class="row justify-content-center"> <div class="col-10 alert alert-danger" role="alert"> O destino deve ser selecionado antes. </div></div>');
+            $(".rodape").attr("style","position: relative; height: 10em; bottom:0;");
         }
     });
 });
