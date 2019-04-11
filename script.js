@@ -345,7 +345,7 @@ function montarItinerario(dados) {
         if (origem == elemento[1] && elemento[2] === void 0) {
             popover='';
             string = '';
-            string += '<div class="row"> <div id="origem" class="origem col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/origem.png"></div>';
+            string += '<div class="row iti"> <div id="origem" class="origem col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/origem.png"></div>';
             cont = true;
         }
     });
