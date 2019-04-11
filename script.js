@@ -238,7 +238,7 @@ var dict = new Object();
       };
 $(document).ready(function () {
     $("#origem").change(function () {
-        $(".rodape").attr("style","");
+        $(".rodape").attr("style","position: absolute; right: 0; bottom: 0; left: 0; text-align: center; font-size: 12px;");
         origem = $(this).children("option:selected").val();
         $("#linkMapOrig").attr("href",maps[origem]);
         $("#linkMapOrig").attr("target","_blank");
@@ -251,7 +251,7 @@ $(document).ready(function () {
     });
 
     $("#destino").change(function () {
-        $(".rodape").attr("style","");
+        $(".rodape").attr("style","position: absolute; right: 0; bottom: 0; left: 0; text-align: center; font-size: 12px;");
         destino = $(this).children("option:selected").val();
         $("#linkMapDest").attr("href",maps[destino]);
         $("#linkMapDest").attr("target","_blank");
