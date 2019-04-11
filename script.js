@@ -243,7 +243,7 @@ $(document).ready(function () {
         $("#linkMapOrig").attr("target","_blank");
         if (destino == origem) {
             console.log('a');
-            $("#resultado").html('<div class="row justify-content-center"> <div class="col-md-4 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
+            $("#resultado").html('<div class="row justify-content-center"> <div class="col-10 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
         }else if(destino!=null){
             montarResultado();
         }
@@ -254,7 +254,7 @@ $(document).ready(function () {
         $("#linkMapDest").attr("href",maps[destino]);
         $("#linkMapDest").attr("target","_blank");
         if (destino == origem) {
-            $("#resultado").html('<div class="row justify-content-center"> <div class="col-md-4 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
+            $("#resultado").html('<div class="row justify-content-center"> <div class="col-10 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
         } else if(origem!=null){
            montarResultado(); 
         }
@@ -262,13 +262,13 @@ $(document).ready(function () {
 
     $("#linkMapOrig").click(function () {
         if(origem == null){
-            $("#resultado").html('<br><div class="row justify-content-center"> <div class="col-md-4 alert alert-danger" role="alert"> A origem deve ser selecionada antes. </div></div>');
+            $("#resultado").html('<br><div class="row justify-content-center"> <div class="col-10 alert alert-danger" role="alert"> A origem deve ser selecionada antes. </div></div>');
         }
     });
 
     $("#linkMapDest").click(function () {
         if(destino == null){
-            $("#resultado").html('<br><div class="row justify-content-center"> <div class="col-md-4 alert alert-danger" role="alert"> O destino deve ser selecionado antes. </div></div>');
+            $("#resultado").html('<br><div class="row justify-content-center"> <div class="col-10 alert alert-danger" role="alert"> O destino deve ser selecionado antes. </div></div>');
         }
     });
 });
@@ -286,6 +286,7 @@ function montarResultado(){
             resultado += "<hr></div><h3 class='titulo'>Intercampi 3 (Sábado)</h3><div class='container-fluid'>";
             montarItinerario(dados3);
             $("#resultado").append(resultado);
+            $(".rodape").attr("style","position: relative; height: 4em; bottom:0;");
             resultado='';
             $('[data-toggle="popover"]').popover();
             $('.popover-dismiss').popover({
