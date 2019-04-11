@@ -288,7 +288,7 @@ function montarResultado(){
             resultado += "<hr></div><h3 class='titulo'>Intercampi 3 (Sábado)</h3><div class='container-fluid'>";
             montarItinerario(dados3);
             $("#resultado").append(resultado);
-            $(".rodape").attr("style","position: relative; height: 4em; bottom:0;");
+            $(".rodape").attr("style","position: relative; height: 10em; bottom:0;");
             resultado='';
             $('[data-toggle="popover"]').popover();
             $('.popover-dismiss').popover({
