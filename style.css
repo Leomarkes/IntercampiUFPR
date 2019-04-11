@@ -53,12 +53,6 @@ html{
     width: 30px;
     height: 30px;
     text-align: center;
-    vertical-align: middle;
-}
-
-.setas{
-    width: 26px;
-    height: 26px;
 }
 
 .origem{
@@ -71,12 +65,10 @@ html{
 
 .divIti{
     text-align: center;
-    vertical-align: middle;
 }
 
 .divIti > a{
     padding: initial;
-    margin-top: 20px;
 }
 
 .semhorario{
@@ -89,7 +81,6 @@ span{
 
 p{
     font-family: 'Comfortaa', cursive;
-    margin: 0px;
 }
 
 select{
@@ -104,16 +95,3 @@ select{
   text-align: center;
   font-size: 12px;
 }*/
-
-.label{
-    text-align: right;
-    margin: 5px 0px 0px 0px;
-}
-
-.col-md-4{
-    padding: 0px 5px 0px 5px;
-}
-
-.iti{
-    margin-bottom: 20px;
-}
