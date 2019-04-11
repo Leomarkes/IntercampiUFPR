@@ -238,6 +238,7 @@ var dict = new Object();
       };
 $(document).ready(function () {
     $("#origem").change(function () {
+        $(".rodape").attr("style","");
         origem = $(this).children("option:selected").val();
         $("#linkMapOrig").attr("href",maps[origem]);
         $("#linkMapOrig").attr("target","_blank");
@@ -250,6 +251,7 @@ $(document).ready(function () {
     });
 
     $("#destino").change(function () {
+        $(".rodape").attr("style","");
         destino = $(this).children("option:selected").val();
         $("#linkMapDest").attr("href",maps[destino]);
         $("#linkMapDest").attr("target","_blank");
