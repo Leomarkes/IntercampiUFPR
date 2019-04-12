@@ -323,12 +323,14 @@ function montarItinerario(dados) {
                     contpop=true;
                     string+='<div class="col-2 divIti"> <a tabindex="0" html="true" data-html="true" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Itinerário" data-content="'+popover+'"><img class="paradas" src="./imgs/stop.jpg"/></a></div>';
                     popover='';
+                }else{
+                    string+='<div class="col-2 divIti"></div>';
                 }
                 string += '<div id="destino" class="destino col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/destino.png"></div></div></div></div>';
-                if(!contpop){
+                /*if(!contpop){
                     string=string.replace("origem col-5","origem col-6");
                     string=string.replace("destino col-5","destino col-6");
-                }
+                }*/
                 if (elemento[2] !== void 0) {
                     string = '';
                     popover='';
