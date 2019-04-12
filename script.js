@@ -321,7 +321,7 @@ function montarItinerario(dados) {
             if (destino == elemento[1]) {
                 if(popover!==''){
                     contpop=true;
-                    string+='<div class="col-2 divIti"> <a tabindex="0" html="true" data-html="true" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Itinerário" data-content="'+popover+'"><img class="paradas" src="./imgs/stop.jpg"/></a></div>';
+                    string+='<div class="col-2 divIti"> <a tabindex="0" html="true" data-html="true" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Paradas" data-content="'+popover+'"><img class="paradas" src="./imgs/stop.jpg"/></a></div>';
                     popover='';
                 }else{
                     string+='<div class="col-2 divIti"></div>';
