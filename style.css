@@ -14,6 +14,15 @@ html{
     margin-top: 20px;
 }
 
+.divFeed{
+    padding: 0.1em;
+}
+
+.divFeed button{
+    padding: 0.3em;   
+    float: right;
+}
+
 .logo{
     width: 25%; 
     height: 100%; 
