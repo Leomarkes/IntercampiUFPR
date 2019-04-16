@@ -257,7 +257,7 @@ $(document).ready(function () {
         $("#linkMapDest").attr("target","_blank");
         if (destino == origem) {
             $("#resultado").html('<div class="row justify-content-center"> <div class="col-10 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
-            $(".rodape").attr("style","");
+            mudaRodape();
         } else if(origem!=null){
            montarResultado(); 
         }
@@ -266,14 +266,14 @@ $(document).ready(function () {
     $("#linkMapOrig").click(function () {
         if(origem == null){
             $("#resultado").html('<br><div class="row justify-content-center"> <div class="col-10 alert alert-danger" role="alert"> A origem deve ser selecionada antes. </div></div>');
-            $(".rodape").attr("style","");
+            mudaRodape();
         }
     });
 
     $("#linkMapDest").click(function () {
         if(destino == null){
             $("#resultado").html('<br><div class="row justify-content-center"> <div class="col-10 alert alert-danger" role="alert"> O destino deve ser selecionado antes. </div></div>');
-            $(".rodape").attr("style","");
+            mudaRodape();
         }
     });
 });
