@@ -1,17 +1,27 @@
 body{
-    position: relative;
+  position: relative;
   margin: 0;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 html{
     height: 100%;
+    overflow-x: hidden;
 }
 
 .tituloP{
     font-family: 'Comfortaa', cursive;
     text-align: center;
     margin-top: 20px;
+}
+
+.divFeed{
+    padding: 0.1em;
+}
+
+.divFeed button{
+    padding: 0.3em;
 }
 
 .logo{
@@ -115,3 +125,4 @@ select{
 .iti{
     margin-bottom: 20px;
 }
+

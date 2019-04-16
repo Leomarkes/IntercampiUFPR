@@ -243,9 +243,8 @@ $(document).ready(function () {
         $("#linkMapOrig").attr("href",maps[origem]);
         $("#linkMapOrig").attr("target","_blank");
         if (destino == origem) {
-            console.log('a');
             $("#resultado").html('<div class="row justify-content-center"> <div class="col-10 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
-            $(".rodape").attr("style","position: relative; height: 10em; bottom:0;");
+            $(".rodape").attr("style","");
         }else if(destino!=null){
             montarResultado();
         }
@@ -258,7 +257,7 @@ $(document).ready(function () {
         $("#linkMapDest").attr("target","_blank");
         if (destino == origem) {
             $("#resultado").html('<div class="row justify-content-center"> <div class="col-10 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
-            $(".rodape").attr("style","position: relative; height: 10em; bottom:0;");
+            mudaRodape();
         } else if(origem!=null){
            montarResultado(); 
         }
@@ -267,14 +266,14 @@ $(document).ready(function () {
     $("#linkMapOrig").click(function () {
         if(origem == null){
             $("#resultado").html('<br><div class="row justify-content-center"> <div class="col-10 alert alert-danger" role="alert"> A origem deve ser selecionada antes. </div></div>');
-            $(".rodape").attr("style","position: relative; height: 10em; bottom:0;");
+            mudaRodape();
         }
     });
 
     $("#linkMapDest").click(function () {
         if(destino == null){
             $("#resultado").html('<br><div class="row justify-content-center"> <div class="col-10 alert alert-danger" role="alert"> O destino deve ser selecionado antes. </div></div>');
-            $(".rodape").attr("style","position: relative; height: 10em; bottom:0;");
+            mudaRodape();
         }
     });
 });
@@ -292,7 +291,7 @@ function montarResultado(){
             resultado += "<hr></div><h3 class='titulo'>Intercampi 3 (Sábado)</h3><div class='container-fluid'>";
             montarItinerario(dados3);
             $("#resultado").append(resultado);
-            $(".rodape").attr("style","position: relative; height: 10em; bottom:0;");
+            mudaRodape();
             resultado='';
             $('[data-toggle="popover"]').popover();
             $('.popover-dismiss').popover({
@@ -322,14 +321,16 @@ function montarItinerario(dados) {
             if (destino == elemento[1]) {
                 if(popover!==''){
                     contpop=true;
-                    string+='<div class="col-2 divIti"> <a tabindex="0" html="true" data-html="true" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Itinerário" data-content="'+popover+'"><img class="paradas" src="./imgs/stop.jpg"/></a></div>';
+                    string+='<div class="col-2 divIti"> <a tabindex="0" html="true" data-html="true" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Paradas" data-content="'+popover+'"><img class="paradas" src="./imgs/stop.jpg"/></a></div>';
                     popover='';
+                }else{
+                    string+='<div class="col-2 divIti"></div>';
                 }
                 string += '<div id="destino" class="destino col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/destino.png"></div></div></div></div>';
-                if(!contpop){
+                /*if(!contpop){
                     string=string.replace("origem col-5","origem col-6");
                     string=string.replace("destino col-5","destino col-6");
-                }
+                }*/
                 if (elemento[2] !== void 0) {
                     string = '';
                     popover='';
@@ -352,4 +353,8 @@ function montarItinerario(dados) {
     if(estadoRes===resultado){
         resultado+="<p class='semhorario'>Não há horários para esta linha.</p>";
     }
+}
+
+function mudaRodape(){
+    $(".rodape").attr("style","position: relative; height: 2em; bottom:0;");
 }
