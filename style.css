@@ -91,9 +91,14 @@ select{
     padding-left:0;
 }
 
+.rowIndicParada{
+    text-align: center;
+}
+
 .indicParada{
     height: 40px;
     width: 33px;
+    margin-right: 0.5em;
 }
 
 .spanParada{
