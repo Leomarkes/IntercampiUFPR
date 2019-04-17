@@ -10,18 +10,35 @@ html{
     overflow-x: hidden;
 }
 
+p, span{
+    font-family: 'Acumin Variable Concept';
+    color: #232443;
+}
+
+a{
+    color: #abadaf;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.col-md-4{
+    padding: 0px 5px 0px 5px;
+}
+
+.rowHeader{
+    margin-right: 1em;
+}
 .tituloP{
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Bahnschrift';
     text-align: center;
     margin-top: 20px;
+    color: #232443;
 }
 
-.divFeed{
-    padding: 0.1em;
-}
-
-.divFeed button{
-    padding: 0.3em;
+.divLogo{
+    text-align: right;
 }
 
 .logo{
@@ -32,18 +49,33 @@ html{
     margin-right: auto;
 }
 
-.titulo{
+.subHeader{
     text-align: center;
-    font-family: 'Poppins', sans-serif;
-    padding: 20px 0px 40px 0px;
+    padding: 1.3em;
+    background-color: #232443;
+    font-size: 1.5em;
+    margin: 1em 0 0 0;
 }
 
-.indicParada{
-    width: 30px;
-    height: 30px;
+.subHeader p{
+    color: #fff;
+    margin-bottom: 0;
 }
+
 .select{
     margin-bottom: 5px;
+}
+
+.labelDesc{
+    text-align: center;
+    font-family: 'Caviar Dreams';
+    font-size: 1.4em;
+    margin: 1em 0 1em 0;
+    color: #ff9a00;
+}
+
+select{
+    font-family: 'Acumin Variable Concept';
 }
 
 .select2{
@@ -59,10 +91,45 @@ html{
     padding-left:0;
 }
 
-.paradas{
-    width: 30px;
-    height: 30px;
+.indicParada{
+    height: 40px;
+    width: 33px;
+}
+
+.spanParada{
+    font-size: 1.2em;
+}
+
+.divFeed{
+    padding: 0.1em;
+}
+
+.divFeed button{
+    padding: 0.3em;
+}
+
+.divTitulo{
     text-align: center;
+    margin: 1.5em 0 1.5em 0;
+    /*border-radius: 0.3em;
+    padding: 0.8em 0 0.8em 0;
+    background-color: #232443;*/
+}
+.titulo{
+    /*display: inline;*/
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Caviar Dreams';
+    margin: 0.5em 0 1em 0;
+    /*padding: 20px 30px 20px 30px;*/
+    
+    /*background-color: #232443;
+    color: #fff;*/
+}
+
+.iti{
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .setas{
@@ -87,21 +154,15 @@ html{
     margin-top: 20px;
 }
 
-.semhorario{
+.paradas{
+    height: 40px;
+    width: 33px;
     text-align: center;
 }
 
-span{
-    font-family: 'Fjalla One', sans-serif;
-}
-
-p{
-    font-family: 'Comfortaa', cursive;
-    margin: 0px;
-}
-
-select{
-    font-family: 'Comfortaa', cursive;
+.semhorario{
+    text-align: center;
+    font-size: 1.5em;
 }
 
 .rodape{
@@ -109,19 +170,6 @@ select{
     height: 2em; 
     bottom:0;
     text-align: center;
-    font-size: 12px;
-}
-
-.label{
-    text-align: center;
-    margin: 35px 0px 0px 0px;
-}
-
-.col-md-4{
-    padding: 0px 5px 0px 5px;
-}
-
-.iti{
-    margin-bottom: 20px;
+    font-size: 1.2em;
 }
 

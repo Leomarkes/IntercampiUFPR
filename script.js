@@ -274,15 +274,15 @@ $(document).ready(function () {
 function montarResultado(){
             $('[data-toggle="popover"]').popover('hide');
             $("#resultado").empty();
-            resultado += "<h3 class='titulo'>Intercampi 1</h3><div class='container-fluid'>";
+            resultado += "<div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 1</h3></div></div></div><div class='container-fluid'>";
             montarItinerario(dados1);
-            resultado += "<hr></div><h3 class='titulo'>Intercampi 2</h3><div class='container-fluid'>";
+            resultado += "<hr></div><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 2</h3></div></div></div><div class='container-fluid'>";
             montarItinerario(dados2);
-            resultado += "<hr></div><h3 class='titulo'>Intercampi 4</h3><div class='container-fluid'>";
+            resultado += "<hr></div><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 4</h3></div></div></div><div class='container-fluid'>";
             montarItinerario(dados4);
-            resultado += "<hr></div><h3 class='titulo'>Intercampi extra</h3><div class='container-fluid'>";
+            resultado += "<hr></div><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi Extra</h3></div></div></div><div class='container-fluid'>";
             montarItinerario(dadosExtra);
-            resultado += "<hr></div><h3 class='titulo'>Intercampi 3 (Sábado)</h3><div class='container-fluid'>";
+            resultado += "<hr></div><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 3 (Sábado)</h3></div></div></div><div class='container-fluid'>";
             montarItinerario(dados3);
             $("#resultado").append(resultado);
             resultado='';
@@ -314,12 +314,12 @@ function montarItinerario(dados) {
             if (destino == elemento[1]) {
                 if(popover!==''){
                     contpop=true;
-                    string+='<div class="col-2 divIti"> <a tabindex="0" html="true" data-html="true" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Paradas" data-content="'+popover+'"><img class="paradas" src="./imgs/stop.jpg"/></a></div>';
+                    string+='<div class="col-2 divIti"> <a tabindex="0" html="true" data-html="true" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Paradas" data-content="'+popover+'"><img class="paradas" src="./imgs/icon2.png"/></a></div>';
                     popover='';
                 }else{
                     string+='<div class="col-2 divIti"></div>';
                 }
-                string += '<div id="destino" class="destino col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/destino.png"></div></div></div></div>';
+                string += '<div id="destino" class="destino col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/seta1.png"></div></div></div></div>';
                 /*if(!contpop){
                     string=string.replace("origem col-5","origem col-6");
                     string=string.replace("destino col-5","destino col-6");
@@ -339,7 +339,7 @@ function montarItinerario(dados) {
         if (origem == elemento[1] && elemento[2] === void 0) {
             popover='';
             string = '';
-            string += '<div class="row iti"> <div id="origem" class="origem col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/origem.png"></div>';
+            string += '<div class="row iti"> <div id="origem" class="origem col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/seta2.png"></div>';
             cont = true;
         }
     });

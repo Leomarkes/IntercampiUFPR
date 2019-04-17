@@ -23,16 +23,32 @@ alunos do curso de Análise e Desenvolvimento de Sistemas da Univeresidade Feder
 </head>
 
 <body>
-  <div class="container-fluid" style="margin-bottom:20px">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <!--<img class="logo" src="https://www.ufpr.br/portalufpr/wp-content/uploads/2015/11/ufpr_1000.jpg" />-->
-        <h2 class="tituloP">IntercampiUFPR</h2>
+  <div class="container-fluid">
+    <div class="row rowHeader">
+      <div class="col-6 divLogo">
+        <img src="./imgs/isotipo.png">
+      </div>
+      <div class="col-6">
+        <div class="row">
+          <h2 class="tituloP" style="margin-bottom: 0;">INTERCAMPI</h2>
+        </div>
+        <div class="row">
+          <h2 class="tituloP" style="margin-top: 0;">UFPR</h2>
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 subHeader">
+        <p>Bem vindo ao site Intercampi UFPR, acompanhe os horários e o destino dos ônibus</p>
+      </div>
+    </div>
+  </div>
+
   <div class="container-fluid select">
-    <p class="label">Selecione a origem e o destino: </p>
+    <p class="labelDesc">SELECIONE A ORIGEM E O DESTINO</p>
     <div class="row">
       <div class="col-6 col-md-4 offset-2 offset-md-4">
         <select name="origem" id="origem" class="custom-select">
@@ -51,7 +67,7 @@ alunos do curso de Análise e Desenvolvimento de Sistemas da Univeresidade Feder
         </select>
       </div>
       <div class="col-2 divIconMap">
-        <a id="linkMapOrig" href="#"><img id="mapOrigem" class="iconMap" src="imgs/map.png"></a>
+        <a id="linkMapOrig" href="#"><img id="mapOrigem" class="iconMap" src="imgs/mapOrigem.png"></a>
       </div>
     </div>
   </div>
@@ -75,20 +91,23 @@ alunos do curso de Análise e Desenvolvimento de Sistemas da Univeresidade Feder
         </select>
       </div>
       <div class="col-2 divIconMap">
-        <a id="linkMapDest" href="#"><img id="mapDestino" class="iconMap" src="imgs/map.png"></a>
+        <a id="linkMapDest" href="#"><img id="mapDestino" class="iconMap" src="imgs/mapDestino.png"></a>
       </div>
     </div>
   </div>
+
   <div class="container-fluid">
     <div class="row justify-content-center">
-      <img class="indicParada" src="./imgs/stop.jpg"> <span style="font-size: 13px;">Indica que há paradas no caminho.
+      <img class="indicParada" src="./imgs/icon2.png"> <span class="spanParada">Este ícone indica que há paradas no caminho.
         Clique para ver os detalhes.</span>
     </div>
   </div>
+
   <div id="resultado">
 
   </div>
-  <div class="container-fluid divFeed">
+
+  <!--<div class="container-fluid divFeed">
     <div class="row">
       <div class="col-12">
         <a href="https://forms.gle/5wiJiAoVjCtD9q3J7" target="_blank"><button type="button"
@@ -96,13 +115,14 @@ alunos do curso de Análise e Desenvolvimento de Sistemas da Univeresidade Feder
       </div>
     </div>
   </div>
+
   <div class="rodape">
     <footer>
       <p>Este site não possui vínculo direto com a UFPR. Os horários das linhas são retirados <a target="_blank"
           href="http://www.pra.ufpr.br/portal/centran/sobre/onibus-intercampi/">deste site</a>. Em caso de alteração,
         podem estar temporariamente desatualizados.</p>
     </footer>
-  </div>
+  </div> -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
