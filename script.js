@@ -272,6 +272,7 @@ $(document).ready(function () {
     });
 });
 function montarResultado(){
+            montaIndicacaoParada();
             $('[data-toggle="popover"]').popover('hide');
             $("#resultado").empty();
             resultado += "<div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 1</h3></div></div></div><div class='container-fluid'>";
@@ -346,4 +347,8 @@ function montarItinerario(dados) {
     if(estadoRes===resultado){
         resultado+="<p class='semhorario'>Não há horários para esta linha.</p>";
     }
+}
+
+function montaIndicacaoParada(){
+    $(".rowIndicParada").append('<img class="indicParada" src="./imgs/icon2.png"> <span class="spanParada">Este ícone indica que há paradas no caminho. Clique para ver os detalhes.</span>');
 }
