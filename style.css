@@ -2,17 +2,19 @@ body{
   position: relative;
   margin: 0;
   min-height: 100%;
-  overflow-x: hidden;
 }
 
 html{
     height: 100%;
-    overflow-x: hidden;
 }
 
-p, span{
-    font-family: 'Acumin Variable Concept';
+p, span, select, option, .custom-select{
+    font-family: Arial, Helvetica, sans-serif;
     color: #232443;
+}
+
+.custom-select{
+    font-size: 1.1rem;
 }
 
 a{
@@ -27,40 +29,23 @@ a:hover{
     padding: 0px 5px 0px 5px;
 }
 
-.rowHeader{
-    margin-right: 1em;
-}
-.tituloP{
-    font-family: 'Bahnschrift';
-    text-align: center;
-    margin-top: 20px;
-    color: #232443;
-}
-
 .divLogo{
-    text-align: right;
-}
-
-.logo{
-    width: 25%; 
-    height: 100%; 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center;
+    margin-top: 1em;
 }
 
 .subHeader{
     text-align: center;
-    padding: 1.3em;
+    padding: 0.5em;
     background-color: #232443;
     font-size: 1.5em;
     margin: 1em 0 0 0;
 }
-
+/*
 .subHeader p{
     color: #fff;
     margin-bottom: 0;
-}
+}*/
 
 .select{
     margin-bottom: 5px;
@@ -68,14 +53,10 @@ a:hover{
 
 .labelDesc{
     text-align: center;
-    font-family: 'Caviar Dreams';
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-size: 1.4em;
     margin: 1em 0 1em 0;
     color: #ff9a00;
-}
-
-select{
-    font-family: 'Acumin Variable Concept';
 }
 
 .select2{
@@ -124,7 +105,7 @@ select{
     /*display: inline;*/
     text-align: center;
     text-transform: uppercase;
-    font-family: 'Caviar Dreams';
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     margin: 0.5em 0 1em 0;
     /*padding: 20px 30px 20px 30px;*/
     
@@ -176,5 +157,6 @@ select{
     bottom:0;
     text-align: center;
     font-size: 1.2em;
+    margin-top: 1em;
 }
 

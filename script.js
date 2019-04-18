@@ -350,5 +350,6 @@ function montarItinerario(dados) {
 }
 
 function montaIndicacaoParada(){
+    $(".rowIndicParada").html("");
     $(".rowIndicParada").append('<img class="indicParada" src="./imgs/icon2.png"> <span class="spanParada">Este ícone indica que há paradas no caminho. Clique para ver os detalhes.</span>');
 }
