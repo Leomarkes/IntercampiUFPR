@@ -275,7 +275,7 @@ function montarResultado(){
             montaIndicacaoParada();
             $('[data-toggle="popover"]').popover('hide');
             $("#resultado").empty();
-            resultado += "<div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 1</h3></div></div></div><div class='container-fluid'>";
+            resultado += "<hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 1</h3></div></div></div><div class='container-fluid'>";
             montarItinerario(dados1);
             resultado += "<hr></div><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 2</h3></div></div></div><div class='container-fluid'>";
             montarItinerario(dados2);

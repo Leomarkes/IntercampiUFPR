@@ -13,6 +13,10 @@ p, span, select, option, .custom-select{
     color: #232443;
 }
 
+hr{
+    border-top: 2px solid rgba(0,0,0,.1);
+}
+
 .custom-select{
     font-size: 1.1rem;
 }
