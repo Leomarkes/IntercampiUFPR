@@ -277,13 +277,13 @@ function montarResultado(){
             $("#resultado").empty();
             resultado += "<hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 1</h3></div></div></div><div class='container-fluid'>";
             montarItinerario(dados1);
-            resultado += "<hr></div><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 2</h3></div></div></div><div class='container-fluid'>";
+            resultado += "</div><hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 2</h3></div></div></div><div class='container-fluid'>";
             montarItinerario(dados2);
-            resultado += "<hr></div><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 4</h3></div></div></div><div class='container-fluid'>";
+            resultado += "</div><hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 4</h3></div></div></div><div class='container-fluid'>";
             montarItinerario(dados4);
-            resultado += "<hr></div><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi Extra</h3></div></div></div><div class='container-fluid'>";
+            resultado += "</div><hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi Extra</h3></div></div></div><div class='container-fluid'>";
             montarItinerario(dadosExtra);
-            resultado += "<hr></div><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 3 (Sábado)</h3></div></div></div><div class='container-fluid'>";
+            resultado += "</div><hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 3 (Sábado)</h3></div></div></div><div class='container-fluid'>";
             montarItinerario(dados3);
             $("#resultado").append(resultado);
             resultado='';
