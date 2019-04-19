@@ -275,15 +275,15 @@ function montarResultado(){
             montaIndicacaoParada();
             $('[data-toggle="popover"]').popover('hide');
             $("#resultado").empty();
-            resultado += "<hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 1</h3></div></div></div><div class='container-fluid'>";
+            resultado += "<hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 1</h3></div></div></div>";
             montarItinerario(dados1);
-            resultado += "</div><hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 2</h3></div></div></div><div class='container-fluid'>";
+            resultado += "<hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 2</h3></div></div></div>";
             montarItinerario(dados2);
-            resultado += "</div><hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 4</h3></div></div></div><div class='container-fluid'>";
+            resultado += "<hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 4</h3></div></div></div>";
             montarItinerario(dados4);
-            resultado += "</div><hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi Extra</h3></div></div></div><div class='container-fluid'>";
+            resultado += "<hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi Extra</h3></div></div></div>";
             montarItinerario(dadosExtra);
-            resultado += "</div><hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 3 (Sábado)</h3></div></div></div><div class='container-fluid'>";
+            resultado += "<hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 3 (Sábado)</h3></div></div></div>";
             montarItinerario(dados3);
             $("#resultado").append(resultado);
             resultado='';
@@ -320,7 +320,7 @@ function montarItinerario(dados) {
                 }else{
                     string+='<div class="col-2 divIti"></div>';
                 }
-                string += '<div id="destino" class="destino col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/seta1.png"></div></div></div></div>';
+                string += '<div id="destino" class="destino col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/seta1.png"></div></div></div></div></div>';
                 /*if(!contpop){
                     string=string.replace("origem col-5","origem col-6");
                     string=string.replace("destino col-5","destino col-6");
@@ -340,7 +340,7 @@ function montarItinerario(dados) {
         if (origem == elemento[1] && elemento[2] === void 0) {
             popover='';
             string = '';
-            string += '<div class="row iti"> <div id="origem" class="origem col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/seta2.png"></div>';
+            string += '<div class="container-fluid"><div class="row iti"> <div id="origem" class="origem col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/seta2.png"></div>';
             cont = true;
         }
     });
