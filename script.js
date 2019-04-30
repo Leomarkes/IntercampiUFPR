@@ -238,26 +238,22 @@ var dict = new Object();
       };
 $(document).ready(function () {
     $("#origem").change(function () {
-        $(".rodape").attr("style","");
         origem = $(this).children("option:selected").val();
         $("#linkMapOrig").attr("href",maps[origem]);
         $("#linkMapOrig").attr("target","_blank");
         if (destino == origem) {
             $("#resultado").html('<div class="row justify-content-center"> <div class="col-10 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
-            $(".rodape").attr("style","");
         }else if(destino!=null){
             montarResultado();
         }
     });
 
     $("#destino").change(function () {
-        $(".rodape").attr("style","");
         destino = $(this).children("option:selected").val();
         $("#linkMapDest").attr("href",maps[destino]);
         $("#linkMapDest").attr("target","_blank");
         if (destino == origem) {
             $("#resultado").html('<div class="row justify-content-center"> <div class="col-10 alert alert-warning" role="alert"> Destino e origem devem ser diferentes. </div> </div>');
-            mudaRodape();
         } else if(origem!=null){
            montarResultado(); 
         }
@@ -266,32 +262,30 @@ $(document).ready(function () {
     $("#linkMapOrig").click(function () {
         if(origem == null){
             $("#resultado").html('<br><div class="row justify-content-center"> <div class="col-10 alert alert-danger" role="alert"> A origem deve ser selecionada antes. </div></div>');
-            mudaRodape();
         }
     });
 
     $("#linkMapDest").click(function () {
         if(destino == null){
             $("#resultado").html('<br><div class="row justify-content-center"> <div class="col-10 alert alert-danger" role="alert"> O destino deve ser selecionado antes. </div></div>');
-            mudaRodape();
         }
     });
 });
 function montarResultado(){
+            montaIndicacaoParada();
             $('[data-toggle="popover"]').popover('hide');
             $("#resultado").empty();
-            resultado += "<h3 class='titulo'>Intercampi 1</h3><div class='container-fluid'>";
+            resultado += "<hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 1</h3></div></div></div>";
             montarItinerario(dados1);
-            resultado += "<hr></div><h3 class='titulo'>Intercampi 2</h3><div class='container-fluid'>";
+            resultado += "<hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 2</h3></div></div></div>";
             montarItinerario(dados2);
-            resultado += "<hr></div><h3 class='titulo'>Intercampi 4</h3><div class='container-fluid'>";
+            resultado += "<hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 4</h3></div></div></div>";
             montarItinerario(dados4);
-            resultado += "<hr></div><h3 class='titulo'>Intercampi extra</h3><div class='container-fluid'>";
+            resultado += "<hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi Extra</h3></div></div></div>";
             montarItinerario(dadosExtra);
-            resultado += "<hr></div><h3 class='titulo'>Intercampi 3 (Sábado)</h3><div class='container-fluid'>";
+            resultado += "<hr><div class='container-fluid'> <div class='row justify-content-center'> <div class='col-12'><h3 class='titulo'>Intercampi 3 (Sábado)</h3></div></div></div>";
             montarItinerario(dados3);
             $("#resultado").append(resultado);
-            mudaRodape();
             resultado='';
             $('[data-toggle="popover"]').popover();
             $('.popover-dismiss').popover({
@@ -321,12 +315,12 @@ function montarItinerario(dados) {
             if (destino == elemento[1]) {
                 if(popover!==''){
                     contpop=true;
-                    string+='<div class="col-2 divIti"> <a tabindex="0" html="true" data-html="true" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Paradas" data-content="'+popover+'"><img class="paradas" src="./imgs/stop.jpg"/></a></div>';
+                    string+='<div class="col-2 divIti"> <a tabindex="0" html="true" data-html="true" class="btn" role="button" data-toggle="popover" data-trigger="focus" title="Paradas" data-content="'+popover+'"><img class="paradas" src="./imgs/icon2.png"/></a></div>';
                     popover='';
                 }else{
                     string+='<div class="col-2 divIti"></div>';
                 }
-                string += '<div id="destino" class="destino col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/destino.png"></div></div></div></div>';
+                string += '<div id="destino" class="destino col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/seta1.png"></div></div></div></div></div>';
                 /*if(!contpop){
                     string=string.replace("origem col-5","origem col-6");
                     string=string.replace("destino col-5","destino col-6");
@@ -346,7 +340,7 @@ function montarItinerario(dados) {
         if (origem == elemento[1] && elemento[2] === void 0) {
             popover='';
             string = '';
-            string += '<div class="row iti"> <div id="origem" class="origem col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/origem.png"></div>';
+            string += '<div class="container-fluid"><div class="row iti"> <div id="origem" class="origem col-5"> <span>' + dict[elemento[1]] + '</span><p>' + elemento[0] + '</p><img class="setas" src="./imgs/seta2.png"></div>';
             cont = true;
         }
     });
@@ -355,6 +349,7 @@ function montarItinerario(dados) {
     }
 }
 
-function mudaRodape(){
-    $(".rodape").attr("style","position: relative; height: 2em; bottom:0;");
+function montaIndicacaoParada(){
+    $(".rowIndicParada").html("");
+    $(".rowIndicParada").append('<img class="indicParada" src="./imgs/icon2.png"> <span class="spanParada">Este ícone indica que há paradas no caminho. Clique para ver os detalhes.</span>');
 }

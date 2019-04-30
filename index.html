@@ -1,7 +1,8 @@
 <!doctype html>
 <!--
-Website desenvolvido por Hiago William Petris e Leonardo Barbosa Marques, 
+Desenvolvido por: Hiago William Petris e Leonardo Barbosa Marques, 
 alunos do curso de Análise e Desenvolvimento de Sistemas da Univeresidade Federal do Paraná.
+Identidade Visual: Laís Ponciano Andrade, aluna do curso de Comunicação Institucional da Universidade Federal do Paraná.
 -->
 <html lang="en">
 
@@ -23,16 +24,24 @@ alunos do curso de Análise e Desenvolvimento de Sistemas da Univeresidade Feder
 </head>
 
 <body>
-  <div class="container-fluid" style="margin-bottom:20px">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <!--<img class="logo" src="https://www.ufpr.br/portalufpr/wp-content/uploads/2015/11/ufpr_1000.jpg" />-->
-        <h2 class="tituloP">IntercampiUFPR</h2>
+  <div class="container-fluid">
+    <div class="row justify-content-center ">
+      <div class="col-12 divLogo">
+        <img src="./imgs/logo.png" class="img-fluid">
       </div>
     </div>
   </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 subHeader">
+        <!--<p>Bem vindo ao site Intercampi UFPR, acompanhe os horários e o destino dos ônibus</p>-->
+      </div>
+    </div>
+  </div>
+
   <div class="container-fluid select">
-    <p class="label">Selecione a origem e o destino: </p>
+    <p class="labelDesc">SELECIONE A ORIGEM E O DESTINO</p>
     <div class="row">
       <div class="col-6 col-md-4 offset-2 offset-md-4">
         <select name="origem" id="origem" class="custom-select">
@@ -51,7 +60,7 @@ alunos do curso de Análise e Desenvolvimento de Sistemas da Univeresidade Feder
         </select>
       </div>
       <div class="col-2 divIconMap">
-        <a id="linkMapOrig" href="#"><img id="mapOrigem" class="iconMap" src="imgs/map.png"></a>
+        <a id="linkMapOrig" href="#"><img id="mapOrigem" class="iconMap" src="imgs/mapOrigem.png"></a>
       </div>
     </div>
   </div>
@@ -75,35 +84,45 @@ alunos do curso de Análise e Desenvolvimento de Sistemas da Univeresidade Feder
         </select>
       </div>
       <div class="col-2 divIconMap">
-        <a id="linkMapDest" href="#"><img id="mapDestino" class="iconMap" src="imgs/map.png"></a>
+        <a id="linkMapDest" href="#"><img id="mapDestino" class="iconMap" src="imgs/mapDestino.png"></a>
       </div>
     </div>
   </div>
+
   <div class="container-fluid">
-    <div class="row justify-content-center">
-      <img class="indicParada" src="./imgs/stop.jpg"> <span style="font-size: 13px;">Indica que há paradas no caminho.
-        Clique para ver os detalhes.</span>
+    <div class="row justify-content-center rowIndicParada">
+      
     </div>
   </div>
+
   <div id="resultado">
 
   </div>
-  <div class="container-fluid divFeed">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-12">
-        <a href="https://forms.gle/5wiJiAoVjCtD9q3J7" target="_blank"><button type="button"
-            class="btn btn-info float-right">Feedback</button></a>
+      <div class="col-12 subHeader">
       </div>
     </div>
   </div>
-  <div class="rodape" style="">
+  <!--<div class="container-fluid divFeed">
+    
+  </div>-->
+
+  <div class="rodape">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 div-btn-feed">
+            <a href="https://forms.gle/5wiJiAoVjCtD9q3J7" target="_blank"><button type="button"
+                class="btn btn-info btn-feed float-right">Feedback</button></a>
+          </div>
+        </div>
+      </div>
     <footer>
       <p>Este site não possui vínculo direto com a UFPR. Os horários das linhas são retirados <a target="_blank"
           href="http://www.pra.ufpr.br/portal/centran/sobre/onibus-intercampi/">deste site</a>. Em caso de alteração,
         podem estar temporariamente desatualizados.</p>
     </footer>
   </div>
-
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

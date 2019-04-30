@@ -2,48 +2,66 @@ body{
   position: relative;
   margin: 0;
   min-height: 100%;
-  overflow-x: hidden;
+  
 }
 
 html{
     height: 100%;
-    overflow-x: hidden;
 }
 
-.tituloP{
-    font-family: 'Comfortaa', cursive;
+p, span, select, option, .custom-select{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #232443;
+}
+
+hr{
+    border-top: 2px solid rgba(0,0,0,.1);
+}
+
+.custom-select{
+    font-size: 1.1rem;
+}
+
+a{
+    color: #abadaf;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.col-md-4{
+    padding: 0px 5px 0px 5px;
+}
+
+.divLogo{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 1em;
 }
 
-.divFeed{
-    padding: 0.1em;
-}
-
-.divFeed button{
-    padding: 0.3em;
-}
-
-.logo{
-    width: 25%; 
-    height: 100%; 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.titulo{
+.subHeader{
     text-align: center;
-    font-family: 'Poppins', sans-serif;
-    padding: 20px 0px 40px 0px;
+    padding: 0.4em;
+    background-color: #232443;
+    font-size: 1.5em;
+    margin: 1em 0 0 0;
 }
+/*
+.subHeader p{
+    color: #fff;
+    margin-bottom: 0;
+}*/
 
-.indicParada{
-    width: 30px;
-    height: 30px;
-}
 .select{
     margin-bottom: 5px;
+}
+
+.labelDesc{
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 1.4em;
+    margin: 1em 0 1em 0;
+    color: #ff9a00;
 }
 
 .select2{
@@ -59,10 +77,50 @@ html{
     padding-left:0;
 }
 
-.paradas{
-    width: 30px;
-    height: 30px;
+.rowIndicParada{
     text-align: center;
+}
+
+.indicParada{
+    height: 40px;
+    width: 33px;
+    margin-right: 0.5em;
+}
+
+.spanParada{
+    font-size: 1.2em;
+}
+
+.divFeed{
+    padding: 0.1em;
+}
+
+.divFeed button{
+    padding: 0.3em;
+}
+
+.divTitulo{
+    text-align: center;
+    margin: 1.5em 0 1.5em 0;
+    /*border-radius: 0.3em;
+    padding: 0.8em 0 0.8em 0;
+    background-color: #232443;*/
+}
+.titulo{
+    /*display: inline;*/
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin: 0.5em 0 1em 0;
+    /*padding: 20px 30px 20px 30px;*/
+    
+    /*background-color: #232443;
+    color: #fff;*/
+}
+
+.iti{
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .setas{
@@ -87,42 +145,43 @@ html{
     margin-top: 20px;
 }
 
-.semhorario{
+.paradas{
+    height: 40px;
+    width: 33px;
     text-align: center;
 }
 
-span{
-    font-family: 'Fjalla One', sans-serif;
+.semhorario{
+    text-align: center;
+    font-size: 1.5em;
 }
 
-p{
-    font-family: 'Comfortaa', cursive;
-    margin: 0px;
+.div-btn-feed{
+    padding-bottom: 1em;
 }
 
-select{
-    font-family: 'Comfortaa', cursive;
+.btn-feed, .btn-feed:hover{
+    background-color: #232443;
+    border: 1px solid #232443;
+}
+
+.btn-feed:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #454775;
+}
+
+.btn-feed:not(:disabled):not(.disabled).active, .btn-feed:not(:disabled):not(.disabled):active, .show>.btn-feed.dropdown-toggle {
+    color: #fff;
+    background-color: #454775;
+    border-color: #454775;
 }
 
 .rodape{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    position: relative; 
+    height: 2em; 
+    bottom:0;
     text-align: center;
-    font-size: 12px;
-}
-
-.label{
-    text-align: center;
-    margin: 35px 0px 0px 0px;
-}
-
-.col-md-4{
-    padding: 0px 5px 0px 5px;
-}
-
-.iti{
-    margin-bottom: 20px;
+    font-size: 1.2em;
+    margin-top: 1em;
 }
 
